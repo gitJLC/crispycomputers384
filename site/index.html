@@ -56,7 +56,7 @@
             <i class="ri-search-line"></i>
           </button>
 
-          <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-btn"> 
+          <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon"> 
             <i class="ri-menu-3-line open-menu-icon"></i>
             <i class="ri-close-line close-menu-icon"></i>
           </button>
@@ -71,10 +71,90 @@
       </header>
 
     <!-- implement search feature -->
-
+      
+    <div class="search-form-container container" id="search-form-container">
+        <div class="form-container-inner">
+            <form action="" class="form">
+                <input class="form-input" type="text" placeholder="let us search">
+                <button class="btn form-btn" type="submit">
+                       <i class="ri-search-line"> </i> 
+                </button>
+          </form>
+        <span class="form-note">to close hit escape</span>
+        </div>
+        <button class="btn form-close-btn place-items-center" id="form-close-btn">
+          <i class="ri-close-line"></i>
+        </button>
+    </div>
     <!-- add featured articles -->
 
-    <!-- quick read -->
+    <section class="featured-articles section-header-offset">
+    
+      <div class="featured-articles-container container d-grid">
+          
+        <div class="featured-content d-grid">
+
+          <div class= "headline-banner">
+            <h3 class="headline fancy-border">
+              <span class="place-items-center"> New Content </span>
+            </h3>
+            <span class="headline-description">Fresh posts on CrispyComputers</span>
+          </div>
+      
+          <!--lines 103 to 114 is the base for all cards -->
+          <a href="./post.html" class="article featured-article featured-article-1">
+          <img src="./assets/images/featured/arcadestick.webp" alt="" 
+          class="article-image">
+          <span class="article-category">3D printing</span>
+          <div class="article-data-container">
+                <div class="article-data">
+                  <span>Nov 30th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>quick read</span>
+                </div>
+          
+            <h3 class="title article-title">My Custom 3D printed Arcade Stick-Mk.3 </h3>
+          </div>
+          </a>
+
+
+          <a href="./post.html" class="article featured-article featured-article-2">
+          <img src="./assets/images/featured/wasdkeyboard.webp" alt="" 
+          class="article-image">
+          <span class="article-category">Technology</span>
+          <div class="article-data-container">
+                <div class="article-data">
+                  <span>Sept 20th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>quick read</span>
+                </div>
+          
+            <h3 class="title article-title">Modding my WASD Code v2 keyboard </h3>
+          </div>
+          </a>
+
+
+          <a href="./post.html" class="article featured-article featured-article-3">
+          <img src="./assets/images/featured/thinkpadguts.webp" alt="" 
+          class="article-image">
+          <span class="article-category">Technology</span>
+          <div class="article-data-container">
+                <div class="article-data">
+                  <span>Nov 15th 2024</span>
+                  <span class="article-data-spacer"></span>
+                  <span>quick read</span>
+                </div>
+          
+            <h3 class="title article-title">I bought a Thinkpad for 36 bucks</h3>
+          </div>
+          </a>
+        </div>
+
+          
+      </div> 
+      </section>
+
+
 
     <!-- older posts -->
 
