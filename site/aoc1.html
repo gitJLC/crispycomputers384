@@ -80,18 +80,106 @@
 
               <div class="blog-post-container container">
                   <div class="blog-post-data">
-                      <h3 class="title blog-post-title">My Custom 3D printed Arcade Stick-Mk.3</h3>  
+                      <h3 class="title blog-post-title">My AoC solution for day 1</h3>  
                       <div class="article-data">
                         <span>Nov 30th 2024</span>
                         <span class="article-data-spacer"></span>
                         <span>short read</span>
                       </div>
-                      <img src="./assets/images/featured/arcadestick.webp" alt="">
+                      <img src="./assets/images/trending/aoc001.webp" alt="">
                   </div>
 
                   <div class="container">
 
-                    <!--put your text here-->
+                    <p>Advent of Code is a yearly programming challenge advent calendar designed to challenge beginner and experienced develoeprs on their problem solving and programming ability. Like any advent calendar, you get small gifts between December 1st and December 25th. I always try to participate but either the time escapes me or I forget to keep up. However, I always try to do the first day of Advent of Code so that If I do want to pick up AoC, I already have a starting point to go off of. Personally, I think Advent of Code is best used for learning a new programming language but anyone could have a valid reason for doing AoC. This year, I chose to write my solution in C++ because I can refactor and iterate faster than picking a language that I am unfamiliar with like, for example, Erlang.</p>
+<p>This year the problem describes reconcilling two list provided by Santa's Historians. This involves parsing through text and a little bit of arithmetic to solve where Santa's Historian is. Here is my solution to day 1 of advent of code 2024. keep in mind, I don't think this is the right solution, correct, or even the most efficient way to solve the day 1 problem but it's my solution that I came up with. It may be naive but it's mine.</p>
+
+        <pre>
+        <code>
+
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+	
+	int list1[1000];
+	int list2[1000];
+	
+	int line_number = 0;
+	string line;
+
+	cout << "Advent of Code 2024" << "\n";
+	
+	ifstream file("input.txt"); //opens file
+	
+	if(!file.is_open()) {
+	cerr << "Error: Unable to open file! please check file name and if file exists." << endl;
+	return 1;
+	}
+
+	for(line_number=0; getline(file, line); line_number++) {
+	istringstream iss(line);
+
+	int value_for_list1;
+	int value_for_list2;
+
+	if(iss >> value_for_list1 >> value_for_list2) {
+	if (line_number >= 1000) {
+		cerr << "Error: Exceeded maximum array size!" << endl;
+		break;
+	}
+
+	list1[line_number] = value_for_list1;
+	list2[line_number] = value_for_list2;
+	} else {
+		cerr << " invalid line format " << line << endl; 	
+	}
+	}
+
+	file.close();
+	
+	//completed parsing, now need to sort the list arrays
+	
+	int size_of_list1 = sizeof(list1) / sizeof(list1[0]);
+	int size_of_list2 = sizeof(list2) / sizeof(list2[0]);
+
+	sort(list1, list1 + size_of_list1); //sort in ascending order
+	sort(list2, list2 + size_of_list2);
+
+	//create a third array to store the sum number pairs of list 1 and 2
+	int list3[1000];
+
+
+	
+	int i = 0;
+	for(i = 0; i < 1000; i++)
+	{
+		list3[i] = abs(list1[i] - list2[i]);
+		cout << list3[i] << "\n";
+
+	}
+
+	
+	int counter = 0;
+	int total_distance = 0;
+	while(counter < 1000) {
+		total_distance += list3[counter];
+		counter++;
+	}
+
+	cout << "total distance: " << total_distance << "\n";
+	return 0;
+}      
+
+</code>
+        </pre>
       </div>
 
       <div class="author d-grid">
