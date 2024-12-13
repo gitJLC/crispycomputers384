@@ -80,18 +80,27 @@
 
               <div class="blog-post-container container">
                   <div class="blog-post-data">
-                      <h3 class="title blog-post-title">My Custom 3D printed Arcade Stick-Mk.3</h3>  
+                      <h3 class="title blog-post-title">Project Plans for making a Gameboy Color emulator</h3>  
                       <div class="article-data">
-                        <span>Nov 30th 2024</span>
+                        <span>Sept 12th 2024</span>
                         <span class="article-data-spacer"></span>
                         <span>short read</span>
                       </div>
-                      <img src="./assets/images/featured/arcadestick.webp" alt="">
+                      <img src="./assets/images/older_posts/gameboyyellow.webp" alt="">
                   </div>
 
                   <div class="container">
 
-                    <!--put your text here-->
+                  <p>Creating a Game Boy Color emulator is an ambitious yet exciting project that combines a passion for retro gaming with the challenge of understanding computer architecture and programming. This endeavor will not only enhance my programming skills but also deepen my appreciation for how classic gaming systems were designed and operated.</p>
+<p>The primary objective of this project is to build a fully functional emulator for the Game Boy Color (GBC), capable of running original GBC games. The emulator should be able to faithfully recreate the GBC experience, including accurate rendering, sound emulation, and input handling.</p>
+<p>My background includes programming experience in Python and C++ from high school and college. This project presents an opportunity to solidify my skills and master C++ to ensure I can write sleek, performant, and low-overhead code for the emulator.</p>
+<p>The emulator will be built in stages, each involving specific technical implementations to address the intricacies of the Game Boy Color&rsquo;s hardware design. CPU emulation is the first stage, requiring the development of an interpreter or just-in-time compiler to replicate the Sharp LR35902 CPU&rsquo;s instruction set. Key tasks include decoding opcodes, managing CPU registers, implementing the stack, and handling interrupts. Careful timing emulation is necessary to match the GBC&rsquo;s clock speed.</p>
+<p>Memory management comes next, encompassing the ROM, RAM, VRAM, and input/output registers. This step involves creating structures for different memory regions, implementing read/write operations, and simulating memory banking for cartridges with mappers.</p>
+<p>Graphics Processing Unit (GPU) emulation follows, focusing on rendering graphics using a tile-based system. Implementation involves decoding tile and sprite data from VRAM, managing display modes (such as H-Blank and V-Blank), and rendering scanlines in accordance with timing constraints. Accurate palette management and support for GBC&rsquo;s extended color features are also critical.</p>
+<p>Audio emulation requires replicating the GBC&rsquo;s audio hardware, which consists of four sound channels using different synthesis techniques, such as square waves or noise generation. This stage involves implementing sound registers, waveform generation, and mixing audio output in real-time.</p>
+<p>Input handling ensures user commands are mapped to the GBC&rsquo;s input registers. This includes debouncing keys, mapping controller buttons, and ensuring inputs are correctly read by the emulated CPU. Optimization is the final step, focusing on reducing computational overhead, improving timing precision, and leveraging modern hardware features, such as multithreading, to maintain synchronization across CPU, GPU, and audio subsystems.</p>
+<p>There are significant challenges to this project. Ensuring accuracy is critical to replicate the behavior of the original hardware. Writing efficient code is equally important, especially for older computers. Debugging is a complex task, as emulation projects often require a deep understanding of the hardware being emulated.</p>
+<p>The ultimate goal is to create an emulator that serves as both a learning tool and a way to preserve and enjoy classic GBC games. By undertaking this project, I hope to develop a deeper understanding of computer architecture, strengthen my C++ programming abilities, and contribute to the retro gaming community. This project is a perfect blend of my technical aspirations and personal interests. It&rsquo;s a journey that promises to be challenging but immensely rewarding.</p>
       </div>
 
       <div class="author d-grid">
